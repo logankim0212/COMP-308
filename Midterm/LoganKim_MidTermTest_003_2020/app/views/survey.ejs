@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" class="comment-bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Logan Kim's COMP308 Lab 2.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title><%= title %></title>
+
+    <link id="pagestyle" rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div class="commentBody">
+        <img class="logo" src="img/logo.jpeg" alt="Logo of Centennial College">
+        <h1><%= title %></h1>
+        <!-- Display flash messages  -->
+        <% for(var i in messages) { %>
+        <div class="flash"><%= messages[i] %></div>
+        <% } %>
+
+        <div class="form">
+            <form method="post">
+                <span class="inputText">Survey ID:</span>
+                <input class="inputForm" type="text" maxlength="10"
+                    placeholder="Please enter the survey ID." name="surveyId" required>
+                <br />
+                <span class="inputText">Game Genre:</span>
+                <input class="inputForm" type="text" maxlength="30"
+                    placeholder="Please enter the game genre." name="gameGenre" required>
+                <br />
+                <span class="inputText">Days Played Per Year:</span>
+                <input class="inputForm" type="number" min="0" max="365" placeholder="Please enter the days played per year."
+                    name="daysPerYear" required>
+                <br />
+                <span class="inputText">Age:</span>
+                <input class="inputForm" type="number" min="0" max="150" placeholder="Please enter the age."
+                    name="age" required>
+                <br />
+                <div style="width: 100%; text-align: center;">
+                    <input class="button" type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+        <br />
+        <div class="index-selection">
+            <a href="/">Back to main</a>
+		</div>
+    </div>
+</body>
+
+</html>

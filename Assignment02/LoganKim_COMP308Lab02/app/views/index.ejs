@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" class="index-bg">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Logan Kim's COMP308 Lab 2.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title><%= title %></title>
+
+	<link id="pagestyle" rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+	<div class="indexBody">
+		<img class="logo" src="img/logo.jpeg" alt="Logo of Centennial College">
+
+		<!-- If a user is authenticated, display the user's full name , otherwise display the authentication links -->
+		<% if ( userFullName ) { %>
+		<h2>Hello <%= userFullName %> </h2>
+		<div class="index-selection" style="margin-top: 50px;">
+			<a href="/comment">Write a comment</a>
+			<br />
+			<br />
+			<a href="/studentlist">View student list</a>
+			<br />
+			<br />
+			<a href="/commentlist?email=<%= email %>">View my comments</a>
+			<br />
+			<br />
+			<!-- <a href="/viewStudentComment">View comments by student</a> -->
+			<a href="/logout">Log out</a>
+		</div>
+		<% } else { %>
+			<h2>Welcome to the myPortal</h2>
+			<div class="index-selection" style="margin-top: 50px;">
+				<a href="/login">Log in</a>
+				<br />
+				<br />
+				<a href="/register">Register</a>
+			</div>
+		<% } %>
+	</div>
+</body>
+
+</html>

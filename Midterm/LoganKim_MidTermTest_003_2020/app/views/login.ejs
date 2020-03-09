@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" class="index-bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Logan Kim's COMP308 Lab 2.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title><%= title %></title>
+
+    <link id="pagestyle" rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div class="loginBody">
+        <img class="logo" src="img/logo.jpeg" alt="Logo of Centennial College">
+
+        <h2><%= title %></h2>
+
+        <form method="post">
+            <input class="inputBox" type="email" size="30" placeholder="Please enter your email" name="username"><br />
+            <input class="inputBox" type="password" size="30" placeholder="Please enter your password"
+                name="password"><br />
+
+            <!-- Display flash messages  -->
+            <% for(var i in messages) { %>
+            <div class="flash"><%= messages[i] %></div>
+            <% } %>
+
+            <input class="button" type="submit" value="Log in">
+        </form>
+        <div class="index-selection">
+            <br />
+            <a href="/register">Register</a>
+            <br />
+            <br />
+            <a href="/">Back to main</a>
+        </div>
+    </div>
+</body>
+
+</html>

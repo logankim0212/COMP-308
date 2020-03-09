@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" class="index-bg">
+
+<head>
+    <!-- Use the 'title' property to render a page title  -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Logan Kim's COMP308 Lab 2.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title><%= title %></title>
+    <link id="pagestyle" rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+<body>
+    <div class="registerBody">
+        <!-- Load the static image file  -->
+        <img class="logo" src="img/logo.jpeg" alt="Logo of Centennial College">
+        <h2><%= title %></h2>
+
+        <form method="post">
+            <input class="registerBox" type="text" size="30" placeholder="First Name" name="firstName" required><br />
+            <input class="registerBox" type="text" size="30" placeholder="Last Name" name="lastName" required><br />
+            <input class="registerBox" type="email" size="50" placeholder="Email that will also be your username" name="email" required><br />
+            <input class="registerBox" type="password" size="30" placeholder="Password (Minimum 6 charactors)" name="password" required><br />
+            <input class="registerBox" type="text" size="30" placeholder="City/Town" name="city" required><br />
+            <input class="registerBox" type="text" size="30" placeholder="Country" name="country" required><br />
+
+            <!-- Display flash messages  -->
+            <% for(var i in message) { %>
+            <div class="flash"><%= message[i] %></div>
+            <% } %>
+            <input class="button" type="submit" value="Register">
+        </form>
+        <div class="index-selection">
+            <br />
+            <a href="/login">Log in</a>
+            <br />
+            <br />
+            <a href="/">Back to main</a>
+        </div>
+    </div>
+</body>
+
+</html>

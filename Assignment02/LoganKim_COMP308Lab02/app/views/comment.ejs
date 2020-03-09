@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" class="comment-bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Logan Kim's COMP308 Lab 2.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title><%= title %></title>
+
+    <link id="pagestyle" rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div class="commentBody">
+        <img class="logo" src="img/logo.jpeg" alt="Logo of Centennial College">
+        <h1><%= title %></h1>
+        <!-- Display flash messages  -->
+        <% for(var i in messages) { %>
+        <div class="flash"><%= messages[i] %></div>
+        <% } %>
+
+        <div class="form">
+            <form method="post">
+                <span class="inputText">Course Code:</span>
+                <input class="inputForm" type="text" maxlength="7"
+                    placeholder="Please enter the course code (i.e. ABCD123)." name="courseCode" required>
+                <br />
+                <span class="inputText">Course Name:</span>
+                <input class="inputForm" type="text" maxlength="30" placeholder="Please enter the course name."
+                    name="courseName" required>
+                <br />
+                <span class="inputText">Program:</span>
+                <input class="inputForm" type="text" maxlength="30" placeholder="Please enter the program name."
+                    name="program" required>
+                <br />
+                <span class="inputText">Semester:</span>
+                <input class="inputForm" type="text" maxlength="30" placeholder="Please enter the semester."
+                    name="semester" required>
+                <br />
+                <span class="inputText">Email:</span>
+                <input class="inputForm" type="text" maxlength="30" placeholder="Please enter the email."
+                    value="<%= email %>" style="background: #b6b6b6;" disabled>
+                <br />
+                <span class="inputText inputTextarea">Your Comment:</span style="line-height: 100px;">
+                <textarea class="inputForm" name="comment" placeholder="Please enter the comment." rows="5"
+                    required></textarea>
+                <br />
+                <div style="width: 100%; text-align: center;">
+                    <input class="button" type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+        <br />
+        <div class="index-selection">
+            <a href="/">Back to main</a>
+		</div>
+    </div>
+</body>
+
+</html>

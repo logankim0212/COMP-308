@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en" class="comment-bg">
+
+<head>
+    <!-- Use the 'title' property to render a page title  -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Logan Kim's COMP308 Lab 2.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title><%= title %></title>
+    <link id="pagestyle" rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div class="studentListBody">
+        <!-- Load the static image file  -->
+        <img class="logo" src="img/logo.jpeg" alt="Logo of Centennial College">
+        <h1><%= title %></h1>
+        <div class="tableContainer">
+            <table class="table">
+                <tr>
+                    <th style="width: 125px;">
+                        First Name
+                    </th>
+                    <th style="width: 125px;">
+                        Last Name
+                    </th>
+                    <th style="width: 225px;">
+                        Email
+                    </th>
+                    <th style="width: 125px;">
+                        City/Town
+                    </th>
+                    <th style="width: 100px;">
+                        Country
+                    </th>
+                    <th style="width: 100px;">
+                        Comments
+                    </th>
+                </tr>
+
+                <% students.forEach(function(student){ %>
+                <tr>
+                    <td>
+                        <%= student.firstName %>
+                    </td>
+                    <td>
+                        <%= student.lastName %>
+                    </td>
+                    <td>
+                        <%= student.email %>
+                    </td>
+                    <td>
+                        <%= student.city %>
+                    </td>
+                    <td>
+                        <%= student.country %>
+                    </td>
+                    <td>
+                        <a href="/commentlist?email=<%= student.email %>">
+                            <div class="commentButton">
+                                View
+                            </div>
+                        </a>
+                    </td>
+                </tr>
+                <% }) %>
+            </table>
+        </div>
+
+        <br />
+        <div class="index-selection">
+            <a href="/">Back to main</a>
+        </div>
+    </div>
+</body>
+
+</html>

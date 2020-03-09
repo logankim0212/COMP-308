@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en" class="comment-bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Logan Kim's COMP308 Lab 2.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title><%= title %></title>
+    <link id="pagestyle" rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div class="commentListBody">
+        <!-- Load the static image file  -->
+        <img class="logo" src="img/logo.jpeg" alt="Logo of Centennial College">
+        <h1><%= title %></h1>
+        <h2 style="color: black;">Comments of "<%= email %>"</h2>
+        <div class="tableContainer">
+            <table class="table">
+                <tr>
+                    <th style="width: 100px;">
+                        Course Code
+                    </th>
+                    <th style="width: 100px;">
+                        Course Name
+                    </th>
+                    <th style="width: 100px;">
+                        Program
+                    </th>
+                    <th style="width: 100px;">
+                        Semester
+                    </th>
+                    <th style="width: 200px;">
+                        Date
+                    </th>
+                    <th style="width: 200px;">
+                        Comments
+                    </th>
+                </tr>
+
+                <% comments.forEach(function(comment){ %>
+                <tr>
+                    <td>
+                        <%= comment.courseCode %>
+                    </td>
+                    <td>
+                        <%= comment.courseName %>
+                    </td>
+                    <td>
+                        <%= comment.program %>
+                    <td>
+                        <%= comment.semester %>
+                    </td>
+                    <td>
+                        <%= comment.date %>
+                    </td>
+                    <td>
+                        <%= comment.comment %>
+                    </td>
+                </tr>
+                <% }) %>
+            </table>
+        </div>
+
+        <br />
+        <div class="index-selection">
+            <a href="/studentlist">Back to the list of students</a>
+            <br />
+            <br />
+            <a href="/">Back to main</a>
+        </div>
+    </div>
+</body>
+
+</html>

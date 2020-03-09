@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en" class="comment-bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Logan Kim's COMP308 Lab 2.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title><%= title %></title>
+    <link id="pagestyle" rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div class="commentListBody">
+        <!-- Load the static image file  -->
+        <img class="logo" src="img/logo.jpeg" alt="Logo of Centennial College">
+        <h1><%= title %></h1>
+        <h2 style="color: black;">Surveys of "<%= email %>"</h2>
+        <div class="tableContainer">
+            <table class="table">
+                <tr>
+                    <th style="width: 100px;">
+                        Survey ID
+                    </th>
+                    <th style="width: 300px;">
+                        Game Genre
+                    </th>
+                    <th style="width: 100px;">
+                        Days Played per Year
+                    </th>
+                    <th style="width: 100px;">
+                        Age
+                    </th>
+                    <th style="width: 100px;">
+                        Update
+                    </th>
+                    <th style="width: 100px;">
+                        Delete
+                    </th>
+                </tr>
+
+                <% surveys.forEach(function(survey){ %>
+                <tr>
+                    <form method="post" action="/updatesurvey?id=<%= survey._id %>">
+                        <td>
+                            <input class="inputFormList" type="number" maxlength="10"
+                                placeholder="Please enter the survey ID." name="surveyId" value="<%= survey.surveyId %>"
+                                required>
+                        </td>
+                        <td>
+                            <input class="inputFormList" style="width: 300px;" type="text" maxlength="10"
+                                placeholder="Please enter the game genre." name="gameGenre"
+                                value="<%= survey.gameGenre %>" required>
+                        </td>
+                        <td>
+                            <input class="inputFormList" type="number" min="0" max="365"
+                                placeholder="Please enter the days played per year." name="daysPerYear"
+                                value="<%= survey.daysPerYear %>" required>
+                        <td>
+                            <input class="inputFormList" type="number" min="0" max="150" placeholder="Please enter the age."
+                                name="age" value="<%= survey.age %>" required>
+                        </td>
+                        <td>
+                            <button class="commentButton" type="submit">Update</button>
+                        </td>
+                        <td>
+                            <a href="/deletesurvey?id=<%= survey._id %>">
+                                <div class="commentButton">
+                                    Delete
+                                </div>
+                            </a>
+                        </td>
+                    </form>
+                </tr>
+                <% }) %>
+            </table>
+        </div>
+
+        <br />
+        <div class="index-selection">
+            <a href="/userlist">Back to the list of users</a>
+            <br />
+            <br />
+            <a href="/">Back to main</a>
+        </div>
+    </div>
+</body>
+
+</html>
