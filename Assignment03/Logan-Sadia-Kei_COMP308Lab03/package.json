@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "Logan, Sadia and Kei's COMP308 Assignment 3.",
   "main": "server.js",
-  "repository": "https://github.com/logankim0212/COMP-308",
-  "author": "Logan Junhwi Kim <logan.kim0212@gmail.com>",
+  "repository": "https://github.com/Logan-Sadia-Kei-COMP308/Assignment03",
+  "author": "Logan-Sadia-Kei.COMP308",
   "contributors": [
+    "Logan Junhwi Kim <logan.kim0212@gmail.com>",
     "Sadia Rashid <sadia.rashid1801@gmail.com>",
     "Kei Mizubuchi <cdfray@gmail.com>"
   ],
