@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.div-style {
+  box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 0px 0px 5px 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.img-style {
+  width: 100%;
+  height: 250px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.img-style-1 {
+  width: 100%;
+  height: 250px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.img-style-login {
+  width: 100%;
+  height: 200px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.img-style-2 {
+  width: 100%;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.h2-style {
+  text-align: center;
+  margin: 10px;
+  color: #0a39e9;
+}
+
+.p-style {
+  margin: 15px;
+  font-size: 24px;
+}
+
+.margin-bottom {
+  margin-bottom: 20px;
+}
+
+.div-right {
+  float: right;
+  width: 50%
+}
+
+.div-left {
+  float: left;
+  width: 50%;
+}
+
+.div-height {
+  height: 1500px;
+  background-color: red;
+}
+
+.paddings {
+  padding: 20px;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.tr:hover {
+  background-color: #f0f0f0;
+}
+
+tr:nth-child(even) {
+  background: #aed6f1;
+  color: #000;
+}
+
+tr:nth-child(odd) {
+  background: #5499c7;
+  color: #fff;
+}
+
+.list-bg {
+  background: #5499c7;
+  color: #fff;
+}
+
+.list-bg:hover {
+  background: #aed6f1;
+  color: #000;
+}
